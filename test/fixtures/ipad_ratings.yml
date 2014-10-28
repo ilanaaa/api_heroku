@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: MyString
+  : MyString
+  1_star: MyString
+  : 1
+  2_star: MyString
+  : 1
+  3_star: MyString
+  : 1
+  4_star: MyString
+  : 1
+  5_star: MyString
+  : 1
+
+two:
+  date: MyString
+  : MyString
+  1_star: MyString
+  : 1
+  2_star: MyString
+  : 1
+  3_star: MyString
+  : 1
+  4_star: MyString
+  : 1
+  5_star: MyString
+  : 1
