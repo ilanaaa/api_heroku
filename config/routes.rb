@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
   # Example of regular route:
   get 'ipad_ratings/get_data' => 'ipad_ratings#get_data'
+  get 'ipad_ratings/save_to_db' => 'ipad_ratings#save_to_db'
   #   get 'products/:id' => 'catalog#view'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
