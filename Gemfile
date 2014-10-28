@@ -46,3 +46,8 @@ ruby "2.0.0"
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+gem 'httparty'
+
+gem 'unicorn'
+
