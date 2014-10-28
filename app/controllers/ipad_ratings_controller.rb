@@ -35,11 +35,16 @@ class IpadRatingsController < ApplicationController
 				@us_hash1=item
 				@current=@us_hash1["current_ratings"]
 				@all=@us_hash1["all_ratings"]
-				a=IpadRatings.new date:Time.now.to_date, onestar:@current["star_1_count"], twostar:@current["star_2_count"], threestar:@ucurrent["star_3_count"], fourstar:@ucurrent["star_4_count"], fivestar:@ucurrent["star_5_count"]
+				a=IpadRatings.new( date: Time.now.to_date, onestar: @current["star_1_count"], twostar: @current["star_2_count"], threestar: @current["star_3_count"], fourstar: @current["star_4_count"], fivestar: @current["star_5_count"])
 				a.save
 			end
 		end
+
+	render text: "lala"
+
 	end
+
+
 
 		
 end
