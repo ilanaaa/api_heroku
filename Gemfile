@@ -52,3 +52,5 @@ gem 'httparty'
 gem 'unicorn'
 
 gem 'resque', "~> 1.22.0"
+
+gem 'resque-scheduler'
