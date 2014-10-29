@@ -51,4 +51,4 @@ gem 'httparty'
 
 gem 'unicorn'
 
-gem 'whenever', :require => false
+gem "resque", "~> 2.0.0.pre.1", github: "resque/resque"
