@@ -51,3 +51,4 @@ gem 'httparty'
 
 gem 'unicorn'
 
+gem 'whenever', :require => false
