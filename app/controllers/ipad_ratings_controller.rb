@@ -1,9 +1,14 @@
 class IpadRatingsController < ApplicationController
+
+	@@current_ratings={}	
+
+
 	def get_data 
 		response = HTTParty.get('https://api.appannie.com//v1.1/apps/ios/app/624497238/ratings', :headers => { "Authorization" => "bearer 6dd4f48d473b0cd4d3cf4d8b8c8a8c3529163bba"})
 		@rhash=response.parsed_response #method to parse to get hash
 		@rating_list_array=@rhash["rating_list"] #gets values for rating_list key (each value is an array)
 		@current_ratings={}
+
 
 		@rating_list_array.each do |item| 
 			if item["country"] == "US"
@@ -36,13 +41,18 @@ class IpadRatingsController < ApplicationController
 				@current=@us_hash1["current_ratings"]
 				@all=@us_hash1["all_ratings"]
 				a=IpadRatings.new( date: Time.now.to_date, onestar: @current["star_1_count"], twostar: @current["star_2_count"], threestar: @current["star_3_count"], fourstar: @current["star_4_count"], fivestar: @current["star_5_count"])
-				a.save
+				a.save unless IpadRatings.exists?(:date => a.date)
 			end
 		end
 
 	render text: "lala"
 
 	end
+
+	def show
+      @ratings = IpadRatings.all
+      render "ipad_ratings/ipad_ratings"
+    end
 
 
 

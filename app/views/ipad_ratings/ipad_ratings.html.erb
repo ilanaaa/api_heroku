@@ -1,0 +1,20 @@
+<table border="1" style="width:100%">
+	<tr>
+		<th>Date</th>
+		<th>Total # of 1 star ratings</th>
+		<th>Total # of 2 star ratings</th>
+		<th>Total # of 3 star ratings</th>
+		<th>Total # of 4 star ratings</th>
+		<th>Total # of 5 star ratings</th>	
+	</tr>
+<% @ratings.each do |ratings|%>
+<tr>
+	<td> <%= ratings.date %> </td>
+	<td> <%= ratings.onestar %> </td>
+	<td> <%= ratings.twostar %> </td>
+	<td> <%= ratings.threestar %> </td>
+	<td> <%= ratings.fourstar %> </td>
+	<td> <%= ratings.fivestar %> </td>
+</tr>	
+<% end %>
+</table>
