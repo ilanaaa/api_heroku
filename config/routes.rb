@@ -9,7 +9,10 @@ Rails.application.routes.draw do
   get 'ipad_ratings/get_data' => 'ipad_ratings#get_data'
   get 'ipad_ratings/save_to_db' => 'ipad_ratings#save_to_db'
   #get 'ipad_ratings/self.perform' => 'ipad_ratings#self.perform'
-  get 'ipad_ratings/show' => 'ipad_ratings#show'
+  get 'iphone_ratings/show' => 'iphone_ratings#show'
+  get 'iphone_ratings/get_data' => 'iphone_ratings#get_data'
+  get 'iphone_ratings/save_to_db' => 'iphone_ratings#save_to_db'
+  get 'iphone_ratings/show' => 'iphone_ratings#show'
   #   get 'products/:id' => 'catalog#view'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)

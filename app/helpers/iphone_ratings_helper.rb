@@ -1,0 +1,2 @@
+module IphoneRatingsHelper
+end
