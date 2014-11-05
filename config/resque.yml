@@ -1,0 +1,7 @@
+copy_db_ratings:
+  cron: "30 6 * * 1"
+  every: 1min
+  class: IpadRatingsController
+  queue: high
+  args: 
+  description: "DB ratings insertion"

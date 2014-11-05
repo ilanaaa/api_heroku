@@ -29,7 +29,7 @@ class IpadRatingsController < ApplicationController
 
 	end
 
-	def save_to_db 
+	def save_to_db
 		response = HTTParty.get('https://api.appannie.com//v1.1/apps/ios/app/624497238/ratings', :headers => { "Authorization" => "bearer 6dd4f48d473b0cd4d3cf4d8b8c8a8c3529163bba"})
 		rhash1=response.parsed_response #method to parse to get hash
 		@rating_list_array1=rhash1["rating_list"] #gets values for rating_list key (each value is an array)
