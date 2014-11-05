@@ -11,20 +11,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141105123023) do
+ActiveRecord::Schema.define(version: 20141105125317) do
 
   create_table "ipad_ratings", force: true do |t|
-    t.string   "date"
-    t.integer  "onestar"
-    t.integer  "twostar"
-    t.integer  "threestar"
-    t.integer  "fourstar"
-    t.integer  "fivestar"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "iphone_ratings", force: true do |t|
     t.string   "date"
     t.integer  "onestar"
     t.integer  "twostar"
