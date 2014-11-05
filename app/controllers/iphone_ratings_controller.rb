@@ -47,8 +47,8 @@ class IphoneRatingsController < ApplicationController
 	end
 
 	def show
-      @ratings = IpadRatings.all
-      render "ipad_ratings/ipad_ratings"
+      @ratings1 = IphoneRatings.all
+      render "iphone_ratings/iphone_ratings"
     end
 
 end
